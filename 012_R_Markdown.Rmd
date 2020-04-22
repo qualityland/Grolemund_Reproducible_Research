@@ -1,0 +1,67 @@
+---
+title: "R Markdown"
+author: "Stefan Schmidt"
+date: "4/21/2020"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+## Popular R Markdown using Web Sites
+
+These web sites heavily use R Markdown:
+
+* [Github](http://www.github.com)
+
+* StackOverflow <http://www.stackoverflow.com>
+
+* Reddit <http://www.reddit.com>
+
+* Meteor <http://www.meteor.com>
+
+* many more...
+
+
+## Formating
+
+Start a new paragraph by entering a blank line.
+
+You can
+
+* use `_` for _italic_ or _emphasized_ text
+
+* use `__` for __bold__ text
+
+* or use _backticks_ to format `code` or `sources`
+
+* using dollar signs make inline equations like $E=mc^{2}$
+
+
+Surround your equation with two dollar signs and you get an _equation block_ like this:
+
+$$E=mc^{2}$$
+
+## Images
+
+Look similar to links, but without any text `![](images/logo.png)`.
+
+
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
