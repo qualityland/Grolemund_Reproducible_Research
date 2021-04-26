@@ -1,7 +1,8 @@
 # QUESTION: Which NYC airport has the longest delays for a given day of the week?
 
 # If you do nto have one or more of the packages used below, please install them
-# by connecting to the internet, opening an R session and running this command (without the #):
+# by connecting to the internet, opening an R session and running this command
+# (without the #):
 # install.packages(c("nycflights13", "dplyr", "ggplot2", "lubridate"))
 library(nycflights13) # data
 library(dplyr)        # cleaning functions
@@ -57,7 +58,8 @@ weekday <-
   group_by(origin) %>%
   summarise(mean_delay = mean(dep_delay))
 
-# RESULTS: Newark has the longest delay, LaGuardia the least
+# RESULTS: JFK has the longest delay, LaGuardia the least
+weekday
 
 # Plot the mean delay by airport for the selected day of the week
 ggplot(weekday, aes(x = origin)) + 
@@ -66,11 +68,11 @@ ggplot(weekday, aes(x = origin)) +
   ylab("Mean delay (m)") +
   xlab("")
 
-# A table of mean delays
-weekday
 
 # Which airport has the shortest mean departure delay on Saturday?
-c("EWR" = "Newark", "JFK" = "JFK", "LGA" = "LaGuardia")[[weekday$origin[which.min(weekday$mean_delay)]]]
+c("EWR" = "Newark",
+  "JFK" = "JFK",
+  "LGA" = "LaGuardia")[[weekday$origin[which.min(weekday$mean_delay)]]]
 
 # How long is that mean delay?
 round(min(weekday$mean_delay), 2)
